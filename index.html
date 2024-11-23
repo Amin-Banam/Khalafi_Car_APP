@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fn-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>خلافی خودرو</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 150vh;
+            background-color: rgba(128, 128, 128, 0.699);
+            color: white;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            margin-top: 2%;
+        }
+        .title1{
+            width: 100%;
+            height: 10%;
+            background-color: black;
+            border-radius: 50px 50px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 3%;
+        }
+        .title1>h1{
+            width: 20%;
+            height: 80%;
+            text-align: center;
+        }
+        .title2{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            background-color:black;
+            padding-right: 2%;
+            padding-top: 3%;
+        }
+        .title2>h2{
+            width: 100%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+        }
+        /* ///////////////////////////end title///////////////////////////// */
+        .pelak{
+            width: 100%;
+            height: 16%;
+            display: flex;
+            background-color:black;
+            justify-content: space-between;
+            padding-top: 3%;
+       }
+       .pelak>div{
+        background-image: url(img/pelak.jfif);
+        background-position: center center;
+        background-repeat: no-repeat ;
+        background-size: 600px 400px;
+        border-radius: 20px;
+        width: 49%;
+        height: 100%;
+        position: relative;
+        margin-left: 1%;
+       }
+       .pelak>div>h2{
+        position: absolute;
+        height: 40%;
+        top: 25%;
+        height: 50%;
+        background-color:transparent;
+        border-radius: 5px;
+        background-color: rgba(128, 128, 128, 0.301);
+        text-align: center;
+        font-size: 20px;
+        
+       }
+       #input1{
+        left: 18%;
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 30px;
+       }
+       #input2{
+        width: 10%;
+        left: 37%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 30px;
+       }
+       #input3{
+        width: 20%;
+        left: 51%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 30px;
+       }
+       #input4{
+        width: 10%;
+        height: 40%;
+        top: 36%;
+        left: 80.7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 30px;
+       }
+       .pelak>span{
+        width: 30%;
+        margin-right: 1%;
+       }
+       #input5{
+        left: 10%;
+        width: 15%;
+        margin: 0 1%;
+        color: rgba(128, 128, 128, 0.699);
+       }
+       #input6{
+        width: 20%;
+        left: 37%;
+        margin: 0 1%;
+        color: rgba(128, 128, 128, 0.699);
+       }
+       #input8{
+        width: 20%;
+        top: 36%;
+        left: 80.7%;
+        margin: 0 1%;
+        color: rgba(128, 128, 128, 0.699);
+       }
+       .pelak>span>input{
+        height: 40%;
+        top: 25%;
+        height: 50%;
+        border-radius: 5px;
+        background-color: rgba(128, 128, 128, 0.301);
+        text-align: center;
+        font-size: 20px;
+       }
+        #input7
+       {
+        width: 21%;
+        height: 40%;
+        top: 25%;
+        height: 50%;
+        border-radius: 5px;
+        background-color: rgba(128, 128, 128, 0.301);
+        text-align: center;
+        font-size: 20px;
+        margin: 0 1%;
+        color: rgba(128, 128, 128, 0.808);
+       }
+       #name_car{
+        width: 100%;
+        background-color: black;
+        padding-top: 3%;
+       }
+       #name_car_p{
+        margin-right: 2%;
+       }
+       #name_car_h2{
+        width: 47%;
+        height: 45px;
+        border-radius: 5px;
+        background-color: rgba(128, 128, 128, 0.301);
+        margin-right: 24%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       #name_car_inp{
+        width: 24%;
+        background-color: rgba(128, 128, 128, 0.301);
+        color: rgba(128, 128, 128, 0.699);
+        margin-right: 2%;
+        border-radius: 5px;
+       }
+       #num_owner{
+        width: 100%;
+        background-color: black;
+        padding-top: 3%;
+       }
+       #num_owner_p{
+        margin-right: 2%;
+       }
+       #num_owner_inp{
+        width: 24%;
+        background-color: rgba(128, 128, 128, 0.301);
+        color: rgba(128, 128, 128, 0.699);
+        margin-right: 2%;
+        border-radius: 5px;
+       }
+       #num_owner_h2{
+        width: 47%;
+        height: 45px;
+        border-radius: 5px;
+        background-color: rgba(128, 128, 128, 0.301);
+        margin-right: 24%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       #national_code{
+        width: 100%;
+        background-color: black;
+        padding-top: 3%;
+       }
+       #national_code_p{
+        margin-right: 2%;
+       }
+       #national_code_inp{
+        width: 24%;
+        background-color: rgba(128, 128, 128, 0.301);
+        color: rgba(128, 128, 128, 0.699);
+        margin-right: 2%;
+        border-radius: 5px;
+       }
+       #national_code_h2{
+        width: 47%;
+        height: 45px;
+        border-radius: 5px;
+        background-color: rgba(128, 128, 128, 0.301);
+        margin-right: 24%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       /* //////////////////////////////////////// */
+       #VIN{
+        width: 100%;
+        background-color: black;
+        padding-top: 3%;
+       }
+       #VIN_p{
+        margin-right: 2%;
+       }
+       #VIN_inp{
+        width: 24%;
+        background-color: rgba(128, 128, 128, 0.301);
+        color: rgba(128, 128, 128, 0.699);
+        margin-right: 2%;
+        border-radius: 5px;
+       }
+       #VIN_h2{
+        width: 47%;
+        height: 45px;
+        border-radius: 5px;
+        background-color: rgba(128, 128, 128, 0.301);
+        margin-right: 24%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       /* //////////////////////////////////////////////////// */
+       #engine_num{
+        width: 100%;
+        background-color: black;
+        padding-top: 3%;
+       }
+       #engine_num_p{
+        margin-right: 2%;
+       }
+       #engine_num_inp{
+        width: 24%;
+        background-color: rgba(128, 128, 128, 0.301);
+        color: rgba(128, 128, 128, 0.699);
+        margin-right: 2%;
+        border-radius: 5px;
+       }
+       #engine_num_h2{
+        width: 47%;
+        height: 45px;
+        border-radius: 5px;
+        background-color: rgba(128, 128, 128, 0.301);
+        margin-right: 24%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       .save{
+        width: 100%;
+        height:130px;
+        background-color: black;
+        padding-top: 3%;
+        border-radius: 0 0 50px 50px;
+       }
+       .save>div>span{
+        width: 50%;
+       }
+       .save>div>span>button{
+        width: 25%;
+        height: 45px;
+        background-color: red;
+        margin-right: 2%;
+        font-size: 18px;
+        border-radius: 5px;
+       }
+       .save>div>div{
+        width: 50%;
+        display: flex;
+       }
+       .save>div>div>h5{
+        margin-top: 2%;
+        margin-right: 2%;
+       }
+    </style>
+</head>
+<body>
+    <div class="container title1"><h1>خلافی خودرو</h1></div>
+    <div class="container title2"><h2>لطفا اطلاعات زیر را تکمیل فرمایید</h2></div>
+    <div class="container pelak">
+        <span class="row">
+            <h2 class="h3">شماره پلاک مالک:</h2>
+            <input id="input5" placeholder="44" type="text">
+            <input id="input6" placeholder="555" type="text">
+            <input id="input7" placeholder="ص" type="text">
+            <input id="input8" placeholder="89" type="text">
+        </span>
+        <div class="row">
+            <h2 id="input1"></h2>
+            <h2 id="input2"></h2>
+            <h2 id="input3"></h2>
+            <h2 id="input4"></h2>
+        </div>
+    </div>
+    <div class="container" id="name_car">
+        <div class="row">
+            <p id="name_car_p" class="h3">نام خودرو:</p>
+            <input id="name_car_inp" type="text" placeholder="پژو206">
+            <h2 id="name_car_h2"></h2>   
+        </div>
+    </div>
+    <div class="container" id="num_owner">
+        <div class="row">
+            <p id="num_owner_p" class="h3">شماره موبایل مالک :</p>
+            <input id="num_owner_inp" type="text" placeholder="09121111111">
+            <h2 id="num_owner_h2"></h2>   
+        </div>
+    </div>
+    <div class="container" id="national_code">
+        <div class="row">
+            <p id="national_code_p" class="h3">کد ملی مالک :</p>
+            <input id="national_code_inp" type="text" placeholder="0012345678">
+            <h2 id="national_code_h2"></h2>   
+        </div>
+    </div>
+    <div class="container" id="VIN">
+        <div class="row">
+            <p id="VIN_p" class="h3">شماره  VIN :</p>
+            <input id="VIN_inp" type="text" placeholder="IRPC111V1LW111111">
+            <h2 id="VIN_h2"></h2>   
+        </div>
+    </div>
+    <div class="container" id="engine_num">
+        <div class="row">
+            <p id="engine_num_p" class="h3">شماره موتور   :</p>
+            <input id="engine_num_inp" type="text" placeholder="1111111">
+            <h2 id="engine_num_h2"></h2>   
+        </div>
+    </div>
+    <div class="container save">
+        <div class="row">
+            <span>
+                <button>ثبت و افزودن</button>
+            </span>
+            <div>
+                <input type="radio" id="inp9">
+                <h5>صحت اطلاعات فوق مورد تایید من می باشد.</h5>
+            </div>
+        </div>
+    </div>
+    <script>
+        let inp8 = document.getElementById('input8')
+        let inp7 = document.getElementById('input7')
+        let inp6 = document.getElementById('input6')
+        let inp5 = document.getElementById('input5')
+        let inp4 = document.getElementById('name_car_inp')
+        let inp3 = document.getElementById('num_owner_inp')
+        let inp2 = document.getElementById('national_code_inp')
+        let inp1 = document.getElementById('VIN_inp')
+        let inp0 = document.getElementById('engine_num_inp')
+
+
+        inp8.addEventListener('keyup', function(){
+                document.getElementById('input1').innerHTML = inp8.value
+        })
+        
+        inp7.addEventListener('keyup', function(){
+            document.getElementById('input2').innerHTML = inp7.value
+        })
+        inp6.addEventListener('keyup', function(){
+            document.getElementById('input3').innerHTML = inp6.value
+        })
+        inp5.addEventListener('keyup', function(){
+            document.getElementById('input4').innerHTML = inp5.value
+        })
+        inp4.addEventListener('keyup', function(){
+            document.getElementById('name_car_h2').innerHTML = inp4.value
+        })
+        inp3.addEventListener('keyup', function(){
+            document.getElementById('num_owner_h2').innerHTML = inp3.value
+        })
+        inp2.addEventListener('keyup', function(){
+            document.getElementById('national_code_h2').innerHTML = inp2.value
+        })
+        inp1.addEventListener('keyup', function(){
+            document.getElementById('VIN_h2').innerHTML = inp1.value
+        })
+        inp0.addEventListener('keyup', function(){
+            document.getElementById('engine_num_h2').innerHTML = inp0.value
+        })
+        
+    </script>
+</body>
+</html>
